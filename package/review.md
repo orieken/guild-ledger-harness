@@ -1,0 +1,5 @@
+# Review stage
+
+Review the candidate against only the assigned request, supplied interfaces, edit scope, and coding guidelines. Use the provided source snapshot/diff and visible-check evidence; treat implementation claims as unverified until supported. You may perform bounded read-only inspection and visible checks in a separate disposable copy. Do not modify the candidate, access independent evaluation, or start agents.
+
+Return only a JSON object with `schema_version` equal to `guild-ledger.h2-review/v1`, `verdict` equal to `pass` or `changes_requested`, and `findings` as an array. Each finding must contain `id`, `severity` (`high`, `medium`, or `low`), `file`, `line` (positive integer or null), `issue`, `evidence`, and `requested_change`. File paths must be relative to the task workspace. Use concrete observed evidence; a missing product requirement is not a defect. A pass verdict requires an empty findings array; changes_requested requires at least one finding. Do not use a pass verdict to claim benchmark acceptance.

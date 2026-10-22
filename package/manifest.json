@@ -1,0 +1,54 @@
+{
+  "schema_version": "guild-ledger.harness-package/v1",
+  "harness_id": "H2",
+  "package_version": "0.1.0-draft",
+  "status": "offline-assembly-only; not admitted",
+  "assets": {
+    "guidelines.md": "fdf8e1e4d8abd311b2864ec54b51ecd640dcedd61c9587f8dcc46dad26344567",
+    "workflow.md": "29058c1a005b015f7f2cff89b7205848adc1ccda5ecb1b2ef1caf442c8f530ed",
+    "implementation.md": "f592106b635f8af2af8edbd1071f5e554e40290821493572f9a2c10f0e2f957f",
+    "review.md": "f352cfa28e9da7178a13895c880c617808f32c2fe29538dddfd071a3b3c3aebe",
+    "repair.md": "5a350fd5e6800f81fc9d1c79295e6b6412ddc3e11d7e8383c3ef12ff613d02fe"
+  },
+  "stages": [
+    {
+      "id": "implementation",
+      "instructions": [
+        "guidelines.md",
+        "workflow.md",
+        "implementation.md"
+      ],
+      "fresh_session": true
+    },
+    {
+      "id": "review",
+      "instructions": [
+        "guidelines.md",
+        "workflow.md",
+        "review.md"
+      ],
+      "fresh_session": true
+    },
+    {
+      "id": "repair",
+      "instructions": [
+        "guidelines.md",
+        "workflow.md",
+        "repair.md"
+      ],
+      "fresh_session": true
+    }
+  ],
+  "initial_stage": "implementation",
+  "tools_added": [],
+  "skills_added": [],
+  "policy": {
+    "review_sessions": 1,
+    "max_repair_sessions": 1,
+    "recursive_agents": false,
+    "model_and_effort": "same-as-campaign",
+    "limits": "shared-aggregate-attempt-allowance",
+    "private_evaluator_access": false,
+    "product_requirements_added": false
+  }
+}
